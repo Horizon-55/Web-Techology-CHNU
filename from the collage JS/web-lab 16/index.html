@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>Web-lab 16</title>
+</head>
+<body>
+    <section class="Body">
+        <div class="container">
+            <div class="curlcle">
+                <h1 class="Name">Калькулятор</h1>
+                <p class="Paragraph">для обчислення довжини кола площі круга та об'єму кулі</p>
+                <label for="radius">Введіть радіус:</label>
+                <input class="ForInputs" type="number" id="radius"><br><br>
+                <label class="ForLabels">Обчислити:</label>
+                <label>Довжина кола (L = 2 * Pi * r)
+                    <input type="radio" name="calculation" id="length">
+                </label>
+                <label>Площа круга (S = Pi * r^2)
+                    <input class="Sentenses" type="radio" name="calculation" id="area" value="area">
+                </label>
+                <label>Об'єм кулі (V = (4/3) * Pi * r^3)
+                    <input class="Sentenses" type="radio" name="calculation" id="volume" value="volume">
+                </label>
+                <div class="Container-Button">
+                    <button class="Buttons SelectAllBtn">Розрахувати</button>
+                </div>
+                <label for="output">Результат:</label>
+                <input class="ForInputs" type="text" id="output">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="valumes">
+                <h1 class="Name">Калькулятор</h1>
+                <p class="Paragraph">для обчислення конус циліндрів</p>
+                <label for="radius">Радіус:</label>
+                <input class="ForInputs" type="number" id="radius2" name="radius"><br><br>
+                <label for="height">Висота:</label>
+                <input class="ForInputs" type="number" id="height2" name="height"><br><br>
+                <label for="valueCone">Об'єм конуса
+                    <input type="radio" id="cone2" name="shape" value="cone">
+                </label>
+                <label for="cylinder">об'єм циліндра
+                    <input type="radio" id="cylinder2" name="shape" value="cylinder">
+                </label>
+                <div class="Container-Button">
+                    <button class="Buttons2 SelectAllBtn">Розрахувати</button><br><br>
+                </div>
+                <label for="result">Результат:</label>
+                <textarea class="ForTextArea" id="result" name="result" rows="5" cols="50" readonly></textarea>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="questions">
+                <h1 class="Name">Тест з теми«Web-орієнтоване програмування»</h1>
+                <p class="Paragraph">1.В якому році була розроблена мова сценаріїв JavaScript?</p>
+                <label for="valueCone">1998
+                    <input type="radio" id="WrongAnswer" name="question1" value="question1">
+                </label>
+                <label for="valueCone">1995
+                    <input type="radio" id="CurrectAnswer" name="question2" value="question2">
+                </label>
+                <label for="valueCone">2001
+                    <input type="radio" id="WrongAnswer" name="question3" value="question3">
+                </label>
+                <p class="Paragraph">2. Якою фірмою була розроблена мова сценаріїв JavaScript?</p>
+                <label for="valueCone">Microsoft
+                    <input type="radio" id="WrongAnswer" name="question4" value="question1">
+                </label>
+                <label for="valueCone">Netscape
+                    <input type="radio" id="CurrectAnswer" name="question5" value="question2">
+                </label>
+                <label for="valueCone">Sun Microsystems
+                    <input type="radio" id="WrongAnswer" name="question6" value="question3">
+                </label>
+                <p class="Paragraph">3. Що повертає функція typeof, якщо змінна не існує або не визначена?</p>
+                <label for="valueCone">Undefined
+                    <input type="radio" id="CurrectAnswer" name="question7" value="question1">
+                </label>
+                <label for="valueCone">Boolean
+                    <input type="radio" id="WrongAnswer" name="question8" value="question2">
+                </label>
+                <label for="valueCone">String
+                    <input type="radio" id="WrongAnswer" name="question9" value="question3">
+                </label>
+                <p class="Paragraph">4. За допомогою якого оператора можна реалізувати повторення виконання групи операторів до тих пір, поки не буде
+                виконано певну умову?</p>
+                <label for="valueCone">for
+                    <input type="radio" id="WrongAnswer" name="question10" value="question1">
+                </label>
+                <label for="valueCone">break
+                    <input type="radio" id="WrongAnswer" name="question11" value="question2">
+                </label>
+                <label for="valueCone">while
+                    <input type="radio" id="CurrectAnswer" name="question12" value="question3">
+                </label>
+                <p class="Paragraph">5. Який об’єкт містить математичні константи і функції?</p>
+                <label for="valueCone">math
+                    <input type="radio" id="CurrectAnswer" name="question1" value="question1">
+                </label>
+                <label for="valueCone">mathematics
+                    <input type="radio" id="WrongAnswer" name="question13" value="question2">
+                </label>
+                <label for="valueCone">matrix
+                    <input type="radio" id="WrongAnswer" name="question14" value="question3">
+                </label>
+                <p class="Paragraph">6.Який об’єкт використовується для роботи з графічними зображеннями?</p>
+                <label for="valueCone">img
+                    <input type="radio" id="CurrectAnswer" name="question15" value="question1">
+                </label>
+                <label for="valueCone">image
+                    <input type="radio" id="WrongAnswer" name="question16" value="question2">
+                </label>
+                <label for="valueCone">images
+                    <input type="radio" id="WrongAnswer" name="question17" value="question3">
+                </label>
+                <p class="Paragraph">7. За допомогою якого методу можна створити вікно попередження?</p>
+                <label for="valueCone">alert()
+                    <input type="radio" id="CurrectAnswer" name="question18" value="question1">
+                </label>
+                <label for="valueCone">prompt()
+                    <input type="radio" id="WrongAnswer" name="question19" value="question2">
+                </label>
+                <label for="valueCone">confirm()
+                    <input type="radio" id="WrongAnswer" name="question20" value="question3">
+                </label>
+                <p class="Paragraph">8. Яким атрибутом обробки події (зв’язаним з даним полем) задається дія, яка виконується в тому випадку, коли користувач
+                обере текст, що міститься в даному полі?</p>
+                <label for="valueCone">onFocus
+                    <input type="radio" id="CurrectAnswer" name="question21" value="question1">
+                </label>
+                <label for="valueCone">onChanges
+                    <input type="radio" id="WrongAnswer" name="question22" value="question2">
+                </label>
+                <label for="valueCone">onSelect
+                    <input type="radio" id="WrongAnswer" name="question23" value="question3">
+                </label>
+                <p class="Paragraph">9. Яка властивість об'єкта image задає порожній простір згори і знизу?</p>
+                <label for="valueCone">vspase
+                    <input type="radio" id="WrongAnswer" name="question24" value="question1">
+                </label>
+                <label for="valueCone">hspace
+                    <input type="radio" id="CurrectAnswer" name="question25" value="question2">
+                </label>
+                <label for="valueCone">wspace
+                    <input type="radio" id="WrongAnswer" name="question26" value="question3">
+                </label>
+                <p class="Paragraph">10. Який обробник події використовується в об’єктах checkbox і radio button?</p>
+                <label for="valueCone">onLoad
+                    <input type="radio" id="WrongAnswer" name="question27" value="question1">
+                </label>
+                <label for="valueCone">onUnload
+                    <input type="radio" id="WrongAnswer" name="question28" value="question2">
+                </label>
+                <label for="valueCone">onClick
+                    <input type="radio" id="CurrectAnswer" name="question29" value="question3">
+                </label>
+                <div class="Container-Button">
+                    <button class="Buttons3 SelectAllBtn">Розрахувати</button><br><br>
+                </div>
+                <h3 class="Name" id="FullAnswer"></h3>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="/js/main.js"></script>
+</html>

@@ -1,0 +1,915 @@
+/*шрифти з гугла!*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/*Мої змінні по css*/
+:root{
+    --hue:200;
+    --saturation:70%;
+    --lightlness: 55%;
+    --main-color: hsl(var(--hue), var(--saturation), var(--lightlness));
+
+    /*Мої текстові кольори!*/
+    --text-white: #ffffff;
+    --text-light-gray: hsl(0, 0, 96%);
+    --text-x-dark-gray: hsl(0, 0%, 10%);
+    --text-dark-gray:hsl(0,0%, 20%);
+    
+    /*Зідні кольори фону*/
+    --body-bg-color: hsl(var(--hue), 60%, 94%);
+    --bg-color: hsl(var(--hue), 60%, 96%);
+    --bg-white: #ffffff;
+    
+    /*границі кольори*/
+    --border-color:hsl(var(--hue), 48%, 80%);
+
+    /*тінь для сторінки*/
+    --shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.3);
+    --focus-shadow: 0 0 10px hsla(var(--hue), 57%, 63%, 0.6);
+
+    /*розмір шрифтів для сторінки*/
+    --fs-4x1:50px;
+    --fs-3x1:35px;
+    --fs-2x1:26px;
+    --fs-xl:20px;
+    --fs-lg:18px;
+    --fs-md:16px;
+    --fs-sm:14px;
+}
+
+/*База для сайту*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: var(--fs-md);
+    line-height: 1.5;
+    color: var(--text-light-gray);
+    background-color: var(--body-bg-color);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a{
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: var(--text-x-dark-gray);
+    line-height: 1.3;
+}
+
+p{
+    margin-bottom: 15px;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.home-text h1{
+    font-size: var(--fs-4x1);
+}
+
+::selection{
+    color: var(--text-white);
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--body-bg-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+}
+/*Контейнер*/
+.container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+
+}
+/*Обгортка сторінки або page wrapper*/
+.page-wrapper{
+    overflow: hidden;
+}
+/*Верхня сторінка сайту або header*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 10px 0;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    z-index: -1;
+    transform: translateY(calc(-100% - 10px));
+    transition: transform 0.5s ease;
+}
+
+.header .bg-reveal::before{
+    transform: translateY(0);
+}
+
+.header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo a{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    display: block;
+    transform: scaleY(0.9);
+    letter-spacing: 2px;
+}
+
+.header .logo span{
+    font-size: 12px;
+    display: block;
+    font-weight: 400;
+    color: var(--text-x-dark-gray);
+    letter-spacing: 1px;
+}
+
+.nav li{
+    display: inline-block;
+    margin-left: 35px;
+}
+
+.nav a{
+    text-transform: capitalize;
+    font-size: var(--fs-md);
+    color: var(--text-x-dark-gray);
+    font-weight: 400;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover{
+    color: var(--main-color);
+}
+
+.nav-toggler{
+    display: none;
+}
+/*Домашня сторінка section home*/
+
+.home{
+    padding: 100px 0 60px;
+}
+
+.home-text,
+.home-img{
+    grid-column: span 6;
+    align-self: center;
+}
+
+.home-text h1{
+    font-size: var(--fs-4x1);
+    margin: 0 0 20px;
+    text-transform: capitalize;
+}
+
+.home-text p{
+    margin: 0 0 30px;
+}
+
+.home-img{
+    position: relative;
+}
+
+.home-img .circle-wrap{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+}
+
+.home-img .circle-wrap{
+    height: 350px;
+    width: 350px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-img img{
+    max-width: 270px;
+    display: block;
+    margin: auto;
+}
+/*grid*/
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 30px;
+}
+/*Кнопка та інші кнопки*/
+button{
+    cursor: pointer;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 28px;
+    background-color: var(--main-color);
+    color: var(--text-white);
+    font-weight: 500;
+    font-size: var(--fs-md);
+    text-transform: capitalize;
+    line-height: 1.5;
+    font-family: inherit;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    vertical-align: middle;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    background-color: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color);
+}
+/*Секція про нас - about us*/
+ 
+.about .section-title{
+    text-align: left;
+    margin: 0 0 15px;
+}
+
+.about .img-box{
+    min-width: 400px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    position: relative;
+
+}
+
+.about .img-box img{
+    border-radius: 50%;
+}
+
+.about-img .box{
+    height: 125px;
+    width: 125px;
+    background-color: var(--main-color);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0 48px;
+    padding: 15px;
+}
+
+.about-img .box{
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.about-img .box span{
+    color: var(--text-white);
+    font-weight: bold;
+    font-size: var(--fs-3x1);
+    margin: 0 0 5px;
+    line-height: 1;
+}
+
+.about-img .box p{
+    font-size: var(--fs-sm);
+    text-transform: uppercase;
+    color: var(--text-light-gray);
+    margin: 0;
+}
+
+
+
+.about-img,
+.about-text{
+    grid-column: span 6;
+    align-self: center;
+}
+
+.section-padding{
+    padding: 60px 0;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title .title{
+    display: inline-block;
+    font-size: var(--fs-md);
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--main-color);
+    margin: 0 0 12px;
+    padding: 0 40px;
+    position: relative;
+}
+
+.section-title .title::before,
+.section-title .title::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 34px;
+    background-color: var(--main-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.section-title .title::before{
+    left: 0;
+}
+
+.section-title .title::after{
+    right: 0;
+}
+
+.section-title .sub-title{
+    font-size: var(--fs-3x1);
+    text-transform: capitalize;   
+}
+
+/*секція про сервіси або section services*/
+.services-item{
+    grid-column: span 3;
+    text-align: center;
+}
+
+.services-item .img-box{
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    box-shadow: var(--shadow);
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+.services-item .img-box img{
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.services-item:hover .img-box img{
+    transform: scale(1.5);
+}
+
+.services-item h3 {
+    text-transform: capitalize;
+    font-size: var(--fs-xl);
+    font-weight: 500;
+}
+
+/*Секція цін або section pricing*/
+.pricing-item{
+    grid-column: span 4;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pricing-header h3{
+    text-transform: capitalize;
+    margin: 0 0 20px;
+    font-size: var(--fs-2x1);
+}
+
+.pricing-header .price{
+    height: 140px;
+    width: 140px;
+    box-shadow: var(--shadow);
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--fs-sm);
+    text-transform: capitalize;
+}
+
+.pricing-header .price span{
+    font-size: var(--fs-3x1);
+    color:var(--main-color);
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.pricing-body{
+    padding: 30px 0;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.pricing-body li+li{
+    margin-top: 10px;
+    position: relative;
+}
+
+.pricing-body li i{
+    position: initial;
+    left: 0;
+    top: 5px;
+    margin-left: -15px;
+    font-size: var(--fs-sm);
+}
+/*секція команди або team section*/
+.team-item{
+    grid-column: span 4;
+}
+
+.team-item .img-box{
+    max-width: 350px;
+    box-shadow: var(--shadow);
+    background-color: var(--bg-color);
+    margin: auto;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.team-item img{
+    border-radius: 50%;
+    transition: filter 0.5s ease;
+}
+
+.team-item:hover img{
+    filter: grayscale(50%);
+}
+
+.team-item .detail{
+    background-color: var(--main-color);
+    width: 85%;
+    max-width: 260px;
+    padding: 15px;
+    margin: -42px auto;
+    text-align: center;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 1;
+    border-radius: 0 40px;
+    transition: border-radius 0.5s ease;
+}
+
+.team-item:hover .detail{
+    border-radius: 40px 0;
+}
+
+.team-item h3{
+    margin: 0 0 5px;
+    color: var(--text-white);
+    font-size: var(--fs-xl);
+    font-weight: 500;
+}
+
+.team-item p{
+    margin: 0;
+    color: var(--text-light-gray);
+}
+
+/*Секція contact us або звяжіться з нами */
+.contact-grid{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-info{
+    grid-column: span 5;
+}
+
+.contact-form{
+    grid-column: span 7;
+}
+.contact-info-item{
+    position: relative;
+    padding: 20px 0 20px 70px;
+}
+
+.contact-info-item + .contact-info-item{
+    margin-top: 20px;
+    border-top: 1px solid var(--border-color);
+}
+
+.contact-info-item i{
+    height: 50px;
+    width: 50px;
+    background-color: var(--bg-color);
+    box-shadow: var(--shadow);
+    color: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+.contact-info-item h3{
+    margin: 0 0 10px;
+    font-size: var(--fs-xl);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.contact-info-item p:last-child{
+    margin: 0;
+}
+/*forms або атрибути для формів*/
+.input-box{
+    margin-bottom: 20px;
+}
+
+.input-control{
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: inherit;
+    color: var(--text-x-dark-gray);
+    padding: 0 20px;
+}
+
+textarea.input-control{
+    display: block;
+    height: 150px;
+    padding-top: 15px;
+    resize: none;
+}
+/*тут для checkbox та label*/
+.container-Form-CheckBox{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.CheckboxEmail{
+    position: relative;
+    left: -5px;
+}
+
+.Name-label{
+    font-size: var(--fs-md);
+}
+/*footer до футеру*/
+.footer{
+    padding: 50px 0;
+    background-color: var(--main-color);
+    text-align: center;
+}
+
+.footer h3{
+    color: var(--text-white);
+    font-size: var(--fs-2x1);
+    margin: 0 0 15px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.footer .social-links a{
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 4px;
+    border: 1px solid transparent;
+    transition: all 0.5s ease;
+}
+
+.footer .social-links a:hover{
+    background-color: transparent;
+    color: var(--text-white);
+    border-color: initial;
+}
+
+/*перевизначення змінної для темної теми*/
+body.t-dark{
+    --text-x-dark-gray: hsl(0, 0%, 94%);
+    --text-dark-gray: hsl(0, 0%, 84%);
+    /*задній фон*/
+    --body-bg-color: hsl(var(--hue), 20%, 10%);
+    --bg-color: hsl(var(--hue), 13%, 17%);
+    /*границя задня*/
+    --border-color: hsl(var(--hue), 15%,  30%); 
+    /*Тінь*/
+    --shadow: 0 0 10px hsla(var(--hue), 19%, 7%, 0.9);
+}
+
+/*адаптація під різні версії*/
+@media(max-width:1199px){
+    .about-img .box-1{
+        top: 100%;
+        left: 50%;
+    }
+}
+
+@media(max-width:991px) {
+    /*Змінні*/
+    :root{
+        --fs-4xl: 42px;
+        --fs-3xl: 31px;
+        --fs-2xl: 24px;
+    }
+    /*Домашня сторінка*/
+    .home-img img{
+        max-width: 250px;
+    }
+
+    .home-img .circle{
+        height: 290px;
+        width: 290px;
+    }
+    /* Сервіси*/
+    .services-item .img-box{
+        height: 120px;
+        width: 120px;
+    }
+    /*Ціни*/
+    .pricing-item{
+        grid-column: span 6;
+    }
+    .pricing-header .price{
+        height: 130px;
+        width: 130px;
+    }
+    /*Команда*/
+    .team-item{
+        grid-column: span 6;
+    }
+}
+
+@media(max-width:767px) {
+    :root {
+        --fs-4xl: 35px;
+        --fs-3xl: 26px;
+        --fs-2xl: 22px;
+        --fs-xl: 18px;
+    }
+    /*навігація або header*/
+    .nav-toggler{
+        display: block;
+        height: 34px;
+        width: 40px;
+        border: none;
+        z-index: 1;
+        background-color: transparent;
+    }
+    .nav-toggler span{
+        display: block;
+        height: 2px;
+        width: 24px;
+        background-color: var(--main-color);
+        margin: auto;
+        position: relative;
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-toggler.active span{
+        background-color: transparent;
+    }
+
+    .nav-toggler, .active span{
+        background-color: transparent;
+    }
+
+    .nav-toggler span::after,
+    .nav-toggler span::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-color);
+        transition: transform 0.3s ease;
+    }
+    .nav-toggler span::before{
+        transform: translateY(-7px);
+    }
+
+    .nav-toggler.active span::before{
+        transform: rotate(45deg);
+    }
+
+    .nav-toggler span::after {
+        transform: translateY(7px);
+    }
+
+    .nav-toggler.active span::after{
+        transform: rotate(-45deg);   
+    }
+
+    .nav{
+        position: fixed;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        width: 260px;
+        background-color: var(--bg-color);
+        margin: 60px 30px 30px;
+        overflow-y: auto;
+        transform: translateX(112%);
+        transition: all 0.3s ease;
+    }
+
+    .nav.open{
+        transform: translateX(0);
+        box-shadow: var(--shadow);
+    }
+
+    .nav li{
+        display: block;
+        margin: 0;
+    }
+    .nav a{
+        font-size: var(--fs-lg);
+    }
+    .nav li + li {
+        border-top: 1px solid var(--border-color);
+    }
+    /*головна сторінка home*/
+    .home-text,
+    .home-img{
+        grid-column: span 12;
+    }
+
+    .home-img{
+        order: -1;
+        margin-bottom: 20px;
+    }
+    /*про людей адаптація*/
+    .about-img,
+    .about-text{
+        grid-column: span 12;
+    }
+    .about-text{
+        order: -1;
+    }
+
+    .about-img .box{
+        height: 115px;
+        width: 115px;
+    }
+    /*Сервіси адаптація*/
+    .services-item{
+        grid-column: span 6;
+    }
+    /*Ціни адаптація*/
+    .pricing-header .price{
+        height: 120px;
+        width: 120px;
+    }
+    /*Контакти адаптація*/
+    .contact-info,
+    .contact-form{
+        grid-column: span 12;
+    }
+
+    .contact-info{
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:575px) {
+    /*grid - грід адаптація*/
+    .grid{
+        gap: 30px 15px;
+    }
+    /*Домашня сторінка*/
+    .home-img img{
+        max-width: 200px;
+    }
+
+    .home-img .circle{
+        height: 250px;
+        width: 250px;
+    }
+    /*Ціни - price адаптація*/
+    .pricing-item{
+        grid-column: span 12;
+    }
+    /*Команда - team адаптація*/
+    .team-item{
+        grid-column: span 12;
+    }
+}
+/*попередній завантажувач - preloader*/
+.preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preloader.fade-out{
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.preloader div{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border-left: 4px solid var(--main-color);
+    border-right: 4px solid var(--main-color);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    animation: preloader 1s linear infinite;
+}
+
+@keyframes preloader{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/*Логотип для футера*/
+.footer .logo{
+    position: relative;
+    top: -50px;
+    left: -350px;
+    display: flex;
+}
+
+.footer .logo a{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1;
+    display: block;
+    transform: scaleY(0.9);
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+.footer .logo span{
+    font-size: 12px;
+    display: block;
+    font-weight: 400;
+    color: var(--text-x-dark-gray);
+    letter-spacing: 1px;
+}

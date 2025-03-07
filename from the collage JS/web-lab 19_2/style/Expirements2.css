@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+html{
+    background-color: #1bbe4c;
+}
+/*для 2 лаб індивідуальної*/
+table img {
+    width: 200px;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+table img:hover {
+    opacity: 0;
+}
+.WeightHeight{
+    height: 400px;
+    width: 300px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+/*для 3 лаб індивідуальної*/
+.hidden {
+    display: none;
+}

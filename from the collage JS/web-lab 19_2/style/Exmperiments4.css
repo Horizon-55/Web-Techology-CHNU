@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+p {
+    position: relative;
+}
+img {
+    cursor: pointer;
+}
+.WeightHeight {
+    height: 400px;
+    width: 300px;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+}
+.Btn{
+    width: 200px;
+    height: 100px;
+    border-radius: 30px;
+    border: 1px solid saddlebrown;
+    color: rgb(16, 219, 219);
+    background-color: #1cc007;
+    cursor: pointer;
+}
+.containerBtn{
+    display: flex;
+    justify-content: center;
+}

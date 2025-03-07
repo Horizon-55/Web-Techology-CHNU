@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #b8307c, #4a3f6d);
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,th{
+    border: 1px solid #000000;
+    padding: 8px;
+}
+.container{ 
+    margin-top: 300px;
+}

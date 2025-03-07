@@ -1,0 +1,36 @@
+let GetX = document.getElementById('setX');
+let GetSinX = document.getElementById('setSinX');
+let GetCosX = document.getElementById('setCosX');
+let GetTgX = document.getElementById('setTgX');
+let GetCtgX = document.getElementById('setCtgX');
+let GetExpX = document.getElementById('setexpX');
+function InsertValue(AnswerX,AnswerSin_x,AnswerCos_x,AnswerTan_x,AnswerCtg_x,AnswerExp_x) {
+      GetX.textContent = AnswerX;
+      GetSinX.textContent = AnswerSin_x;
+      GetCosX.textContent = AnswerCos_x;
+      GetTgX.textContent = AnswerTan_x;
+      GetCtgX.textContent = AnswerCtg_x;
+      GetExpX.textContent = AnswerExp_x;
+};
+function addRow() {
+      const Answerx = x;
+      const AnswerSin_x = Math.sin(sin_x);
+      const AnswerCos_x = Math.cos(cos_x);
+      const AnswerTan_x = Math.tan(tg_x);
+      const AnswerCtg_x = 1 / Math.tan(ctg_x);
+      const AnswerExp_x = Math.exp(exp_x);
+      InsertValue(Answerx,AnswerSin_x,AnswerCos_x,AnswerTan_x,AnswerCtg_x,AnswerExp_x);
+};
+let x = prompt('Введіть x');
+let sin_x = prompt('Введіть sin(x)');
+let cos_x = prompt('Введіть cos(x)');
+let tg_x = prompt('Введіть tg(x)');
+let ctg_x = prompt('Введіть ctg(x)');
+let exp_x = prompt('Введіть exp(x)');
+x = parseFloat(x);
+sin_x = parseFloat(sin_x);
+cos_x = parseFloat(cos_x);
+tg_x = parseFloat(tg_x);
+ctg_x = parseFloat(ctg_x);
+exp_x = parseFloat(exp_x);
+addRow();

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;300;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+html{
+    background-color: #00ffff;
+}
+
+.curlcle{
+    background-color: #b23db6;
+    border-radius: 50px;
+    border: 1px solid black;
+    width: 800px;
+    height: 500px;
+}
+
+label, input{
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.Sentenses{
+    display: flex;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.Name{
+    text-align: center;
+}
+
+.ForInputs{
+    position: relative;
+    left: 320px;
+}
+
+.ForLabels{
+    position: relative;
+    top: -15px;
+}
+/*Для стилів параграфів*/
+.Paragraph{
+    text-align: center;
+    font-size: 18px;
+    font-family: Chivo Mono;
+    font-weight: 300;
+}
+/*стиль кнопок*/
+.Buttons {
+    border: 1px solid #000000; 
+}
+.SelectAllBtn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 28px;
+    background-color: #7616c5;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    vertical-align: middle;
+    user-select: none;
+}
+
+.SelectAllBtn:active {
+    border: 1px solid #000000;
+    color: #ffffff;
+    background-color: #b61616;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+
+.Container-Button{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+/*Стиль для 2 завдання*/
+.valumes{
+    background-color: #3d53b6;
+    border-radius: 50px;
+    border: 1px solid black;
+    width: 800px;
+    height: 500px;
+}
+
+.ForTextArea{
+    margin-top: 10px;
+    position: absolute;
+    right: 740px;
+}
+/*Стиль 3 завдання по питання JS*/
+.questions{
+    background-color: #c02063;
+    border-radius: 50px;
+    border: 1px solid black;
+    width: 800px;
+    height: 1050px;
+}

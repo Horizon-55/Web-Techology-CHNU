@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+/*для 1 індивідуальної лаб*/
+.hidden {
+    display: none;
+}
+html{
+    background-color: #deb887;
+}
+.container{
+    text-align: center;
+}
+p{
+    margin-bottom: 10px;
+}
