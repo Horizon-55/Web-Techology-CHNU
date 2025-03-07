@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="/style/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/style.css" />
     <title>Завдання 2</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h2 class="heading">Конвектор Американської пеки в літр та саки</h2>
-        <h4 class="desc">1 пека = 8.809768 літра</h4>
-        <h4 class="desc">1 пека = 0.07929 саки</h4>
-        <div class="main">
-            <div class="initial">
-                <div class="options"><select id="conversion-options1">
-                    <option value="Peka">Пека</option>
-                </select></div>
-                <div class="input"><input id="inputPeka" type="number"></div>
-            </div>
-            <span class="material-icons swap" style="font-size:36px;">
-                swap_horizon
-            </span>
-            <div class="target">
-                <div class="options"><select id="conversion-options2">
-                    <option value="litr">Літр</option>
-                    <option value="Saka">Сака</option>
-                </select></div>
-                <div class="input"><input id="outputlitr" type="number"></div>
-            </div>
+      <h2 class="heading">Конвектор Американської пеки в літр та саки</h2>
+      <h4 class="desc">1 пека = 8.809768 літра</h4>
+      <h4 class="desc">1 пека = 0.07929 саки</h4>
+      <div class="main">
+        <div class="initial">
+          <div class="options">
+            <select id="conversion-options1">
+              <option value="Peka">Пека</option>
+            </select>
+          </div>
+          <div class="input"><input id="inputPeka" type="number" /></div>
         </div>
-        <button class="result" id="btnresult">Result</button>
+        <span class="material-icons swap" style="font-size: 36px">
+          swap_horizon
+        </span>
+        <div class="target">
+          <div class="options">
+            <select id="conversion-options2">
+              <option value="litr">Літр</option>
+              <option value="Saka">Сака</option>
+            </select>
+          </div>
+          <div class="input"><input id="outputlitr" type="number" /></div>
+        </div>
+      </div>
+      <button class="result" id="btnresult">Result</button>
     </div>
-</body>
-<script src="/js/script2.js"></script>
+  </body>
+  <script src="/js/script2.js"></script>
 </html>
