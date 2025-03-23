@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Zavdanya 1</title>
+</head>
+<body>
+    <h1>Управління лампочкою</h1>
+
+    <div class="controls">
+        <div>
+            <label for="bulbType">Виберіть тип лампочки:</label>
+            <select id="bulbType">
+                <option value="regular">Звичайна лампочка</option>
+                <option value="energy-saving">Енергозберігаюча лампочка</option>
+                <option value="led">Світодіодна лампочка</option>
+            </select>
+        </div>
+
+        <div class="btn-group">
+            <button id="toggleBtn">Включити</button>
+            <button id="brightnessBtn">Змінити яскравість</button>
+        </div>
+
+        <div class="lightbulb-container">
+            <div id="lightbulb" class="lightbulb regular off"></div>
+        </div>
+
+        <div class="info">
+            <p>Стан: <span id="statusText">Виключено</span></p>
+            <p>Яскравість<span id="brightnessText">50%</span></p>
+            <p>Автовимкнення через: <span id="timerText" class="timer">5:00</span></p>
+        </div>
+    </div>
+</body>
+<script src="/main.js"></script>
+</html>

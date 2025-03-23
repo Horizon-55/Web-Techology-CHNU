@@ -1,0 +1,88 @@
+/*завдання 1 стилі!*/
+body{
+    font-family: Arial, sans-serif;
+    min-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.lightbulb-container{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.lightbulb{
+    width: 150px;
+    height: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    transition: opacity 0.3s, filter 0.3s;
+}
+
+.regular {
+    background-image: url('/api/placeholder/150/150');
+}
+.energy-saving {
+    background-image: url('/api/placeholder/150/150');
+}
+.led {
+    background-image: url('/api/placeholder/150/150');
+}
+
+.off {
+    opacity: 0.5;
+    filter: brightness(0.5);
+}
+.on {
+    opacity: 1;
+    filter: brightness(1);
+}
+
+.cotrols{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.btn-group{
+    display: flex;
+    gap: 10px;
+}
+
+button{
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+}
+
+button:hover{
+    background-color: #45a049;
+}
+
+button:disabled{
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+select{
+    padding: 8px;
+    width: 200px;
+}
+
+.info{
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+.timer{
+    font-weight: bold;
+    color: #ff5722;
+}
