@@ -22,13 +22,13 @@ body{
 }
 
 .regular {
-    background-image: url('/api/placeholder/150/150');
+    background-image: url('/images/Lantern_29_JE1_BE2.png');
 }
 .energy-saving {
-    background-image: url('/api/placeholder/150/150');
+    background-image: url('/images/Lantern_29_JE1_BE2.png');
 }
 .led {
-    background-image: url('/api/placeholder/150/150');
+    background-image: url('/images/Lantern_29_JE1_BE2.png');
 }
 
 .off {
