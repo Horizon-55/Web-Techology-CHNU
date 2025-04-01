@@ -1,0 +1,125 @@
+/*2 завдання лабораторної*/
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.traffic-light {
+    background-color: #333;
+    width: 150px;
+    height: 400px;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.light {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #555;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.red {
+    background-color: #555;
+}
+
+.yellow {
+    background-color: #555;
+}
+
+.green {
+    background-color: #555;
+}
+
+.active-red {
+    background-color: #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+}
+
+.active-yellow {
+    background-color: #ffff00;
+    box-shadow: 0 0 20px #ffff00;
+}
+
+.active-green {
+    background-color: #00ff00;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+.controls {
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.settings {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.setting-group {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 8px;
+    width: 60px;
+}
+
+.status {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.blink {
+    animation: blink-animation 0.5s 3;
+}
+
+@keyframes blink-animation {
+    50% {
+        opacity: 0.5;
+    }
+}

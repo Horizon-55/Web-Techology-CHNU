@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Set & WeakMap & WeakSet</title>
+    <link rel="stylesheet" href="/css/task4style.css">
+</head>
+<body>
+    <h1>E-commerce Product Management</h1>
+    
+    <div id="notification" class="notification"></div>
+    
+    <div class="container">
+        <!-- Додавання продуктової панелі -->
+        <div class="panel">
+            <h2>Add New Product</h2>
+            <div class="form-group">
+                <label for="productName">Product Name:</label>
+                <input type="text" id="productName" placeholder="Enter product name">
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Price ($):</label>
+                <input type="number" id="productPrice" min="0" step="0.01" placeholder="Enter price">
+            </div>
+            <div class="form-group">
+                <label for="productQuantity">Quantity in Stock:</label>
+                <input type="number" id="productQuantity" min="0" placeholder="Enter quantity">
+            </div>
+            <button id="addProductBtn" class="success">Add Product</button>
+        </div>
+        
+        <!-- Пошук та оновлення панелі -->
+        <div class="panel">
+            <h2>Search Products</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search by product name">
+                <button id="searchBtn">Search</button>
+            </div>
+            
+            <h2>Update Product</h2>
+            <div class="form-group">
+                <label for="updateProductId">Product ID:</label>
+                <input type="text" id="updateProductId" placeholder="Enter product ID" readonly>
+            </div>
+            <div class="form-group">
+                <label for="updateProductName">Product Name:</label>
+                <input type="text" id="updateProductName" placeholder="Product name" readonly>
+            </div>
+            <div class="form-group">
+                <label for="updateProductPrice">Price ($):</label>
+                <input type="number" id="updateProductPrice" min="0" step="0.01" placeholder="Update price">
+            </div>
+            <div class="form-group">
+                <label for="updateProductQuantity">Quantity in Stock:</label>
+                <input type="number" id="updateProductQuantity" min="0" placeholder="Update quantity">
+            </div>
+            <div class="form-group">
+                <button id="updateProductBtn">Update Product</button>
+                <button id="deleteProductBtn" class="danger">Delete Product</button>
+            </div>
+        </div>
+        
+        <!-- Продуктовий список панелі -->
+        <div class="panel wide-panel">
+            <h2>Product Catalog</h2>
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Продуктовий список лист буде оброблений тут -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Створення замовлення панелі -->
+        <div class="panel wide-panel">
+            <h2>Create New Order</h2>
+            <div id="orderItems">
+                <!--  Позиції для замовлення будуть додані тут -->
+            </div>
+            <button id="addOrderItemBtn" class="secondary">+ Add Item</button>
+            <button id="createOrderBtn" class="success">Create Order</button>
+        </div>
+        
+        <!-- Список замовлень! -->
+        <div class="panel wide-panel">
+            <h2>Order History</h2>
+            <table id="orderTable">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Products</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody id="orderTableBody">
+                    <!-- Замовлень список лист буде тут -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Панель аналітики -->
+        <div class="panel wide-panel">
+            <h2>Store Analytics</h2>
+            <div id="analyticsPanel">
+                <div class="stat-card">
+                    <h3>Total Products</h3>
+                    <div id="totalProducts" class="stat-value">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Orders</h3>
+                    <div id="totalOrders" class="stat-value">0</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Revenue</h3>
+                    <div id="totalRevenue" class="stat-value">$0.00</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Low Stock Items</h3>
+                    <div id="lowStockItems" class="stat-value">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/js/task4.js"></script>
+</html>

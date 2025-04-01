@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>setTimeout & setInterval</title>
+    <link rel="stylesheet" href="/css/task2style.css">
 </head>
 <body>
+    <h1>Traffic Light Simulation</h1>
     
+    <div class="traffic-light">
+        <div class="light red" id="red">RED</div>
+        <div class="light yellow" id="yellow">YELLOW</div>
+        <div class="light green" id="green">GREEN</div>
+    </div>
+    
+    <div class="status" id="status">Ready</div>
+    
+    <div class="controls">
+        <button id="startBtn">Start Traffic Light</button>
+        <button id="stopBtn">Stop</button>
+        <button id="nextBtn">Next State</button>
+        
+        <div class="settings">
+            <div class="setting-group">
+                <label for="redDuration">Red Duration (s):</label>
+                <input type="number" id="redDuration" min="1" max="20" value="5">
+            </div>
+            
+            <div class="setting-group">
+                <label for="yellowDuration">Yellow Duration (s):</label>
+                <input type="number" id="yellowDuration" min="1" max="20" value="3">
+            </div>
+            
+            <div class="setting-group">
+                <label for="greenDuration">Green Duration (s):</label>
+                <input type="number" id="greenDuration" min="1" max="20" value="7">
+            </div>
+            
+            <div class="setting-group">
+                <label for="blinkCount">Yellow Blink Count:</label>
+                <input type="number" id="blinkCount" min="1" max="10" value="3">
+            </div>
+        </div>
+    </div>
 </body>
+<script src="/js/task2JS.js"></script>
 </html>
