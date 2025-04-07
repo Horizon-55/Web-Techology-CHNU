@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Task2Style.css">
+    <title>Web Site To-do-list</title>
+</head>
+<body>
+    <header>
+        <h1>Список завдань</h1>
+        <p>Додавайте, редагуйте та відстежуйте свої завдання</p>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Введіть нове завдання..." required maxlength="100">
+                <button id="addTaskBtn">Додати</button>
+            </div>
+
+            <div class="sort-controls">
+                <h3>Сортувати за:</h3>
+                <div class="sort-buttons">
+                    <button class="sort-btn active" data-sort="date-added">Дата додавання</button>
+                    <button class="sort-btn" data-sort="completion">Статус виконання</button>
+                    <button class="sort-btn" data-sort="date-updated">Дата оновлення</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <ul id="taskList" class="task-list">
+                <li class="empty-list">Поки що немає завдань. Додайте нове завдання вище!</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Список завдань | Створено з використанням чистого JS</p>
+    </footer>
+</body>
+<script src="/js/Task2Main.js"></script>
+</html>

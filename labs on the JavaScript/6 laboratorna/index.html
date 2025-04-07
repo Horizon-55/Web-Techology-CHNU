@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>To do list</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Product Management System</div>
+        <div class="total-price">Total: <span id="total-price">0.00</span> ₴</div>
+    </header>
+    <main>
+        <section class="controls">
+            <div class="filter-section">
+                <h3>Filter by:</h3>
+                <div id="category-filters">
+                    <!-- Category buttons will be added here -->
+                </div>
+                <button id="reset-filter" class="reset">Reset Filters</button>
+            </div>
+            <div class="sort-section">
+                <h3>Sort by:</h3>
+                <button id="sort-price" class="sort-btn">Price</button>
+                <button id="sort-created" class="sort-btn">Creation Date</button>
+                <button id="sort-updated" class="sort-btn">Last Updated</button>
+                <button id="reset-sort" class="reset">Reset Sort</button>
+            </div>
+        </section>
+
+        <section class="product-list" id="product-list">
+            <!-- Products will be added here -->
+            <div class="empty-list" id="empty-list">
+                <p>Наразі список товарів пустий. Додайте новий товар.</p>
+            </div>
+        </section>
+
+        <button id="add-product-btn" class="success">Додати новий товар</button>
+    </main>
+     <!-- Add/Edit Product Modal -->
+     <div class="modal-overlay" id="product-modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">Add New Product</h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <form class="modal-form" id="product-form">
+                <input type="hidden" id="product-id">
+                <div class="form-group">
+                    <label for="product-name">Name:</label>
+                    <input type="text" id="product-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-price">Price:</label>
+                    <input type="number" id="product-price" min="0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="product-category">Category:</label>
+                    <select id="product-category" required>
+                        <option value="electronics">Electronics</option>
+                        <option value="clothing">Clothing</option>
+                        <option value="books">Books</option>
+                        <option value="food">Food</option>
+                        <option value="home">Home</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="product-image">Image URL:</label>
+                    <input type="url" id="product-image" required>
+                </div>
+                <button type="submit" class="success" id="save-product">Save Product</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Snackbar/Toast -->
+    <div class="snackbar" id="snackbar"></div>
+</body>
+<script src="/js/main.js"></script>
+</html>
