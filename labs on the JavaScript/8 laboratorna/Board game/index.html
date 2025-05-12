@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Pair Game</title>
+    <meta
+      name="description"
+      content="A modern Memory Pair Game built with HTML, CSS, and JavaScript."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <section id="memory-game" class="memory-game-section">
+        <div class="container">
+          <h2>Memory Pair Game</h2>
+          <div class="setup-controls">
+            <label for="complexity">Complexity:</label>
+            <select id="complexity">
+              <option value="4x4">4 x 4 (Easy)</option>
+              <option value="6x4">6 x 4 (Medium)</option>
+              <option value="6x6">6 x 6 (Hard)</option>
+            </select>
+            <button id="start-btn" class="cta-button primary">
+              Start Game
+            </button>
+          </div>
+          <div class="game-controls" style="display: none">
+            <span id="move-counter">Moves: 0</span>
+            <span id="timer">Time: 0s</span>
+            <button id="restart-btn" class="cta-button secondary">
+              Restart
+            </button>
+          </div>
+          <div id="game-board" class="game-board" style="display: none"></div>
+        </div>
+      </section>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
