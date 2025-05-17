@@ -1,0 +1,172 @@
+body {
+  background: #F3F4F6;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1F2937;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(79, 70, 229, 0.08);
+}
+
+/* Memory Pair Game Styles */
+.memory-game-section {
+    background: #F3F4F6;
+    padding: 4rem 0;
+}
+.memory-game-section h2 {
+    text-align: center;
+    color: #4F46E5;
+    margin-bottom: 2rem;
+}
+.game-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    color: #1F2937;
+}
+#restart-btn {
+    background: #F59E42;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#restart-btn:hover {
+    background: #4F46E5;
+    color: #fff;
+}
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(70px, 1fr));
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #F3F4F6;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.08);
+}
+@media (max-width: 600px) {
+    .game-board {
+        grid-template-columns: repeat(4, minmax(50px, 1fr));
+        max-width: 95vw;
+        padding: 0.5rem;
+    }
+}
+.memory-card {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #4F46E5;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    perspective: 600px;
+    transition: box-shadow 0.2s;
+    user-select: none;
+}
+.memory-card.flipped .card-inner,
+.memory-card.matched .card-inner {
+    transform: rotateY(180deg);
+}
+.memory-card .card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+    position: relative;
+}
+.memory-card .card-front,
+.memory-card .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.memory-card .card-front {
+    background: #fff;
+    color: #4F46E5;
+    box-shadow: 0 2px 8px rgba(31, 41, 55, 0.04);
+    transform: rotateY(180deg);
+}
+.memory-card .card-back {
+    background: #4F46E5;
+    color: #fff;
+}
+.memory-card.matched .card-front {
+    background: #F59E42;
+    color: #fff;
+}
+.memory-card.matched {
+    cursor: default;
+    box-shadow: 0 0 0 2px #F59E42;
+    opacity: 0.85;
+}
+.memory-card:active:not(.matched):not(.flipped) {
+    box-shadow: 0 0 0 2px #F59E42;
+}
+
+.setup-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.setup-controls label {
+  font-weight: 500;
+  color: #1F2937;
+}
+.setup-controls select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  background: #F3F4F6;
+  color: #1F2937;
+  outline: none;
+  transition: border 0.2s;
+}
+.setup-controls select:focus {
+  border: 1.5px solid #4F46E5;
+}
+#start-btn {
+  background: #4F46E5;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+#start-btn:hover {
+  background: #F59E42;
+  color: #fff;
+} 
