@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Network Friends Search</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Authentication Section -->
+    <div id="auth-section" class="auth-container">
+      <div class="auth-form">
+        <h2>Welcome to Social Network</h2>
+        <form id="login-form">
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+          <div class="form-group">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-primary">Login</button>
+        </form>
+        <p>
+          Don't have an account? <a href="#" id="show-register">Register</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div id="main-content" class="main-container hidden">
+      <!-- Header -->
+      <header class="header">
+        <div class="user-info">
+          <span id="user-name">User Name</span>
+          <button id="logout-btn" class="btn-secondary">Logout</button>
+        </div>
+      </header>
+
+      <!-- Search and Filter Section -->
+      <div class="search-filter-container">
+        <div class="search-box">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search friends..."
+          />
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="filter-controls">
+          <select id="sort-select">
+            <option value="name-asc">Name (A-Z)</option>
+            <option value="name-desc">Name (Z-A)</option>
+            <option value="age-asc">Age (Low to High)</option>
+            <option value="age-desc">Age (High to Low)</option>
+          </select>
+          <div class="filter-group">
+            <input type="number" id="age-filter" placeholder="Filter by age" />
+            <input
+              type="text"
+              id="location-filter"
+              placeholder="Filter by location"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- User Cards Container -->
+      <div id="user-cards" class="user-cards-container"></div>
+
+      <!-- Pagination -->
+      <div class="pagination-container">
+        <div id="pagination" class="pagination"></div>
+      </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
